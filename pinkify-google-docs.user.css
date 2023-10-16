@@ -4,12 +4,16 @@
 @version        1.1.0
 @description    Makes Google Docs pink
 @author         graftedsoul
+
+@preprocessor stylus
+@var select fontFamily "Font Family" ["Poppins*", "Balsamiq Sans", "Roboto", "Google Sans"]
+
 ==/UserStyle== */
 @-moz-document url-prefix("https://docs.google.com/document/d/") {
+	@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins&display=swap');
+	
 	body {
-		font-size: /*[[font-size]]*/
-		px !important;
-		font-family: 'Poppins', sans-serif !important;
+		font-family: fontFamily, sans-serif !important;
 	}
 	.docs-gm ::-webkit-scrollbar-thumb {
 		background-color: #ffdbe7
@@ -39,8 +43,7 @@
 		background-color: #ffd7e8 !important;
 	}
 	.outline-refresh .navigation-item-content {
-		font-family: 'Poppins', sans-serif !important;
-		font-size: 0.9em !important;
+		font-family: fontFamily, sans-serif !important;
 	}
 	.outline-refresh .location-indicator-highlight.navigation-item,
 	.outline-refresh .location-indicator-highlight.navigation-item .navigation-item-level-0 {
@@ -112,13 +115,11 @@
 	.docs-gm .docs-menubar .goog-control,
 	.docs-title-widget {
 		filter: hue-rotate(125deg);
-		font-size: /*[[font-size]]*/
-		px !important;
-		font-family: 'Poppins', sans-serif !important;
+		font-family: fontFamily, sans-serif !important;
 	}
 	.docs-gm .goog-toolbar,
 	.docs-gm #docs-toolbar {
-		font-family: 'Poppins', sans-serif !important;
+		font-family: fontFamily, sans-serif !important;
 	}
 
 	/* NEW */
